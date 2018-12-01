@@ -9,6 +9,8 @@ exports.calculate = function(req, res) {
     res.status(400);
     res.json({ error: err.message });
   });
+  
+  // +a is required for to retain it as integer instead of string
 
   var operations = {
     'add':      function(a,b) { return +a + +b },
